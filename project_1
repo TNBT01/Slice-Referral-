@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get ₹50 From Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .card {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 380px;
+    }
+    h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #6c5ce7;
+      padding: 12px 20px;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+      border-radius: 10px;
+      transition: 0.2s;
+    }
+    .btn:hover {
+      background: #5444d6;
+    }
+    .emoji {
+      font-size: 40px;
+    }
+      @media (max-width: 480px) {
+      .card { padding: 20px; max-width: 90%; }
+      h1 { font-size: 24px; }
+      p { font-size: 14px; }
+      .btn { font-size: 16px; padding: 10px 16px; }
+      .emoji { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rain"></div>
+  <div class="card">
+    <div class="emoji">🤑💸</div>
+    <h1>Grab Your ₹50 Instantly</h1>
+    <p>
+      Open your Slice account using my link. <br/>
+      Send me the screenshot. <br/><b>I pay instantly. No drama.</b>
+    </p>
+
+    <a href="https://t.sliceit.com/s?c=T9wxCDq&ic=SATHY64574" class="btn">Open Slice Account</a>
+
+    <p style="margin-top:18px; font-size:13px; color:#555;">
+      100% legit. You open → I pay. Simple.
+    </p>
+  </div>
+
+  <style>
+    .rain {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: -1;
+    }
+    .note {
+      position: absolute;
+      width: 60px;
+      height: auto;
+      animation: fall linear infinite;
+      opacity: 0.8;
+    }
+    @keyframes fall {
+      0% { transform: translateY(-150px) rotate(0deg); }
+      100% { transform: translateY(120vh) rotate(360deg); }
+    }
+  </style>
+
+  <script>
+    const rainContainer = document.querySelector('.rain');
+    for (let i = 0; i < 25; i++) {
+      const note = document.createElement('img');
+      note.src = 'https://i.ibb.co/MNTL3Vf/50rs.png';
+      note.classList.add('note');
+      note.style.left = Math.random() * 100 + 'vw';
+      note.style.animationDuration = 2 + Math.random() * 3 + 's';
+      note.style.animationDelay = Math.random() * 2 + 's';
+      note.style.transform = `rotate(${Math.random() * 360}deg)`;
+      rainContainer.appendChild(note);
+    }
+  </script>
+</body>
+</html>
